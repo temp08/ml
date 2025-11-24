@@ -1,0 +1,8 @@
+%% Q2: Trapezoidal rule for f(x) = 0.2 + 25*x + 3*x^2, from a=0 to b=2
+f2 = @(x) 0.2 + 25*x + 3*x.^2;
+a2 = 0; b2 = 2; n2 = 100;
+h2 = (b2 - a2)/n2;
+x2 = a2:h2:b2;
+y2 = f2(x2);
+I_trap2 = (h2/2)*(y2(1) + 2*sum(y2(2:end-1)) + y2(end));
+fprintf('Q2: Trapezoidal rule result = %.4f\n', I_trap2);
