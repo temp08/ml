@@ -1,0 +1,22 @@
+clc
+clear all
+% Dataset
+X = [1996 1997 1998 1999 2000]';
+Y = [40 50 62 58 60]';
+
+% Cubic Fit
+p = polyfit(X, Y, 3);  % 3 = cubic
+Y_fit = polyval(p, X);
+
+% Display coefficients
+disp('Cubic coefficients [d c b a]:');
+disp(p);
+
+% Plot
+figure;
+plot(X, Y, 'ko', 'MarkerFaceColor', 'k'); hold on;
+plot(X, Y_fit, 'm-.', 'LineWidth', 2);
+xlabel('Year'); ylabel('Y');
+title('Cubic Fit for Dataset 4');
+legend('Data', 'Cubic Fit');
+grid on;
