@@ -1,0 +1,14 @@
+clc
+clear all
+syms t s
+
+f1 = 4 - 4*exp(-2*t)*cos(t);
+F1 = laplace(f1, t, s);
+F1s = simplify(F1)
+
+f2 = 2*exp(-2*t)*sin(t);
+F2 = laplace(f2, t, s);
+F2s = simplify(F2)
+
+disp(F1s)
+disp(F2s)
