@@ -1,0 +1,23 @@
+clc
+clear all
+
+% Dataset
+X = [1 2 3 4 5 6 7 8 9]';
+Y = [26 7 8 10 11 11 10 9 8]';
+
+% Quadratic Fit
+p = polyfit(X, Y, 2);  % 2 = quadratic
+Y_fit = polyval(p, X);
+
+% Display coefficients
+disp('Quadratic coefficients [c b a]:');
+disp(p);
+
+% Plot
+figure;
+plot(X, Y, 'ko', 'MarkerFaceColor', 'k'); hold on;
+plot(X, Y_fit, 'g--', 'LineWidth', 2);
+xlabel('X'); ylabel('Y');
+title('Quadratic Fit for Dataset 3');
+legend('Data', 'Quadratic Fit');
+grid on;
