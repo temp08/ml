@@ -1,0 +1,7 @@
+%% Q4: Simpson's 3/8 rule for given x and y
+x4 = [0 0.1 0.2 0.3 0.4];
+y4 = [1 0.9975 0.99 0.9776 0.8604];
+n4 = length(x4)-1; % number of intervals (must be multiple of 3)
+h4 = x4(2)-x4(1);
+I_simp38 = (3*h4/8)*(y4*(1) + 3*(y4*(2)+y4*(3)) + 2*y4*(4) + y4*(5)); % formula for 4 intervals
+fprintf('Q4: Simpson''s 3/8 rule result = %.4f\n', I_simp38);
