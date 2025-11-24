@@ -1,0 +1,12 @@
+clc
+clear all
+theta = (0:pi/4:5*pi/4)';  
+r = 2;
+
+x = r * cos(theta);        
+y = r * sin(theta);
+
+disp('x:'), disp(x)
+disp('y:'), disp(y)
+%check equation of circle
+radius = sqrt(x.^2 + y.^2);
