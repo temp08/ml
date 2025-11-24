@@ -1,0 +1,22 @@
+clc
+clear all
+% Dataset
+X = [1 2 3 4 5 6]';
+Y = [1200 900 600 200 110 50]';
+
+% Linear Fit
+p = polyfit(X, Y, 1);  % 1 = linear
+Y_fit = polyval(p, X);
+
+% Display coefficients
+disp('Linear coefficients [slope intercept]:');
+disp(p);
+
+% Plot
+figure;
+plot(X, Y, 'ko', 'MarkerFaceColor', 'k'); hold on;
+plot(X, Y_fit, 'r-', 'LineWidth', 2);
+xlabel('X'); ylabel('Y');
+title('Linear Fit for Dataset 1');
+legend('Data', 'Linear Fit');
+grid on;
