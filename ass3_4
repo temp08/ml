@@ -1,0 +1,6 @@
+clc
+clear all
+syms s t
+F = (s-5)/( s*(s+2)^2 );
+f = ilaplace(F, s, t);
+simplify(f)
