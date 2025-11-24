@@ -1,0 +1,16 @@
+clc
+clear all
+t = linspace(0,20,1000);   % parameter
+x = sin(t);
+y = cos(t);
+z = t;
+
+figure
+plot3(x,y,z,'-','LineWidth',1.5)
+xlabel('x = sin(t)')
+ylabel('y = cos(t)')
+zlabel('z = t')
+title('Circular helix: x=sin(t), y=cos(t), z=t, 0 ≤ t ≤ 20')
+grid on
+axis equal
+view(45,20)
