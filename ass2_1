@@ -1,0 +1,8 @@
+clc
+clear all
+m = 0.5;
+c = -2;
+x = [0 1.5 3 4 5 7 9 10];   
+y = m*x + c
+disp('x values:'), disp(x)
+disp('y values:'), disp(y)
