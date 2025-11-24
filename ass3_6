@@ -1,0 +1,7 @@
+clc
+clear all
+
+syms t s a y(x)
+ode = (x^2-1)^2*diff(y(x),x,2) + (x+1)*diff(y(x),x) - y(x) == 0;
+ySol = dsolve(ode);
+simplify(ySol)
