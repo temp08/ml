@@ -1,0 +1,6 @@
+clc
+clear all
+syms s t
+F = 10*(s+2)/( s*(s^2+4*s+5) );
+f = ilaplace(F, s, t);
+simplify(f)
