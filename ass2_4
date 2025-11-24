@@ -1,0 +1,11 @@
+clc
+clear all
+x = linspace(0,2*pi,100);
+y = sin(x);
+
+figure
+plot(x,y,'-b','LineWidth',1.5)
+xlabel('x')
+ylabel('sin(x)')
+title('Plot created by yourname')
+grid on
