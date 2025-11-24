@@ -1,0 +1,18 @@
+clc 
+clear all
+x = linspace(0,2*pi,100);
+y = sin(x);
+
+figure
+plot(x,y,'o')           
+xlabel('x')
+ylabel('sin(x)')
+title('Plot created by yourname')
+grid on
+
+figure
+plot(x,y,x,y,'o')       
+xlabel('x')
+ylabel('sin(x)')
+title('Plot created by yourname')
+grid on
